@@ -16,6 +16,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .header__start {
   width: 31%;
@@ -124,4 +125,41 @@ body {
 }
 .header__end__dropdown__menu a:hover {
   color: black;
+}
+
+.static-blob {
+  position: absolute;
+}
+
+.navbar {
+  width: 96%;
+  margin: auto;
+}
+.navbar__form {
+  width: 30%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+.navbar__form__input {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__form__input input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-bottom: 0.5px solid rgb(226, 220, 220);
+  transition: all 0.4s ease-in;
+}
+.navbar__form__input input:hover {
+  border-bottom-color: black;
+}
+.navbar__form__input i {
+  position: absolute;
+  right: 0;
 }/*# sourceMappingURL=main.css.map */
