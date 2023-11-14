@@ -19,9 +19,13 @@ body {
 }
 .header__start {
   width: 31%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 .header__start__list {
   width: 100%;
+  margin: 0;
   list-style: none;
   display: flex;
   justify-content: start;
@@ -37,10 +41,87 @@ body {
 .header__start__list__item a:hover {
   color: goldenrod;
 }
+.header__start__list__item a i {
+  background-color: transparent;
+  font-size: 0.8rem;
+  margin-right: 3px;
+}
+.header__start__list__item a svg {
+  font-size: 0.75rem;
+  margin-right: 3px;
+  transition: fill 0.3s ease;
+}
+.header__start__list__item a svg:hover {
+  fill: goldenrod;
+}
+.header__start__list__item span {
+  font-family: "Vremena-Grotesk-Bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/VremenaGrotesk/VremenaGroteskBold.woff") format("woff");
+  font-size: 0.85rem;
+  margin-left: 5px;
+}
 .header__center {
   width: 31%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__center p {
+  font-family: "Vremena-Grotesk-Bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/VremenaGrotesk/VremenaGroteskBold.woff") format("woff");
+  font-size: 0.875rem;
+  color: #343a40;
+  margin: 0;
 }
 .header__end {
   width: 31%;
   display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.header__end__btn {
+  border: none;
+  outline: none;
+  font-family: "Vremena-Grotesk-Bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/VremenaGrotesk/VremenaGroteskBold.woff") format("woff");
+  font-size: 0.875rem;
+  color: inherit;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__end__btn:hover {
+  cursor: pointer;
+}
+.header__end__dropdown {
+  width: 20%;
+}
+.header__end__dropdown .rotate-arrow {
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.header__end__dropdown .rotate-arrow.up::after {
+  transform: rotate(180deg);
+}
+.header__end__dropdown__menu {
+  padding: 0;
+  border: none;
+}
+.header__end__dropdown__menu a {
+  font-family: "Vremena-Grotesk-Bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/VremenaGrotesk/VremenaGroteskBold.woff") format("woff");
+  font-size: 0.875rem;
+  color: #868e96;
+  transition: 0.5s ease-in;
+}
+.header__end__dropdown__menu a:hover {
+  color: black;
 }/*# sourceMappingURL=main.css.map */

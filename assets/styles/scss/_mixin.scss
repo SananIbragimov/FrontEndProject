@@ -1,0 +1,14 @@
+@mixin fontFace($fontFamily, $fontStyle, $fontWeight, $fontFile, $customSrc: null) {
+    font-family: $fontFamily, sans-serif;
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+
+    @if $customSrc {
+        src: #{$customSrc},
+        url('../../fonts/VremenaGrotesk/#{$fontFile}.woff') format('woff');
+    }
+
+    @else {
+        src: url('../../fonts/VremenaGrotesk/#{$fontFile}.woff') format('woff');
+    }
+}
