@@ -12,3 +12,17 @@
         src: url('../../fonts/VremenaGrotesk/#{$fontFile}.woff') format('woff');
     }
 }
+
+@mixin flexContainer($justify-content: center, $align-items: center, $gap: null) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+
+    @if $gap {
+        gap: #{$gap};
+    }
+
+    @else {
+        gap: $gap;
+    }
+}
