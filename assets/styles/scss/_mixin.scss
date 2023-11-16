@@ -1,17 +1,21 @@
-@mixin fontFace($fontFamily, $fontStyle, $fontWeight, $fontFile, $customSrc: null) {
-    font-family: $fontFamily, sans-serif;
-    font-style: $fontStyle;
-    font-weight: $fontWeight;
-
-    @if $customSrc {
-        src: #{$customSrc},
-        url('../../fonts/VremenaGrotesk/#{$fontFile}.woff') format('woff');
-    }
-
-    @else {
-        src: url('../../fonts/VremenaGrotesk/#{$fontFile}.woff') format('woff');
+@mixin fontFace($family, $weight, $filename) {
+    @font-face {
+        font-family: '#{$family}';
+        font-style: normal;
+        font-weight: #{$weight};
+        src: url('../../fonts/VremenaGrotesk/#{$filename}.woff') format('woff');
     }
 }
+
+// @include fontFace('Vremena Grotesk Regular', 400, 'VremenaGrotesk');
+// @include fontFace('Vremena Grotesk Bold', 700, 'VremenaGroteskBold');
+// @include fontFace('Vremena Grotesk Bold Italic', 700, 'VremenaGroteskBoldItalic');
+// @include fontFace('Vremena Grotesk Book', 400, 'VremenaGroteskBook');
+// @include fontFace('Vremena Grotesk Book Italic', 400, 'VremenaGroteskBookItalic');
+// @include fontFace('Vremena Grotesk Italic', 400, 'VremenaGroteskItalic');
+// @include fontFace('Vremena Grotesk Medium', 500, 'VremenaGroteskMedium');
+// @include fontFace('Vremena Grotesk Medium Italic', 500, 'VremenaGroteskMediumItalic');
+
 
 @mixin flexContainer($justify-content: center, $align-items: center, $gap: null) {
     display: flex;
@@ -25,4 +29,21 @@
     @else {
         gap: $gap;
     }
+}
+
+@mixin linkStyles {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #212529;
+    letter-spacing: .2rem;
+    font-weight: bold;
+    line-height: 1.6;
+    font-size: .8rem;
+}
+
+@mixin textBlockStyles($fontSize, $fontWeight, $lineHeight, $marginBottom) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    margin-bottom: $marginBottom;
 }
