@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-ABC123..." crossorigin="anonymous" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/styles/css/main.css">
@@ -36,7 +35,7 @@
         </div>
         <div class="header__end">
             <div class="dropdown header__end__dropdown">
-                <button class="btn dropdown-toggle rotate-arrow header__end__btn" type="button" id="languageDropdown"
+                <button class="btn px-3 dropdown-toggle rotate-arrow header__end__btn" type="button" id="languageDropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     English
                 </button>
@@ -45,7 +44,7 @@
                     <a class="dropdown-item" href="#">German</a>
                 </div>
             </div>
-
+    
             <div class="dropdown header__end__dropdown">
                 <button class="btn dropdown-toggle rotate-arrow header__end__btn" type="button" id="currencyDropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,66 +65,151 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="./index.html">Varkala</a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button> -->
+            </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav navbar__nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="btn border-0 dropdown-toggle navbar__nav__title" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Home
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="homeDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                      </a>
+                    
+                      <ul class="dropdown-menu border-0 navbar__nav__home__icons" style="min-width: 200px;">
+                        <li><a class="dropdown-item" href="#">Home 1 - Fashion</a></li>
+                        <li><a class="dropdown-item" href="#">Home 2 - Fashion</a></li>
+                        <li><a class="dropdown-item" href="#">Home 3 - Design <span class="badge bg-light text-warning-emphasis ms-3">New</span></a></li>
+                        <li><a class="dropdown-item" href="#">Home 4 - Design <span class="badge bg-light text-warning-emphasis ms-3">New</span></a></li>
+                      </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="btn border-0 dropdown-toggle navbar__nav__title" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Shop
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="shopDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                
+                    <ul class="dropdown-menu border-0" style="min-width: 700px; margin-top: 50px; margin-right: 50px;">
+                        <div class="row">
+                            <div class="col-4">
+                                <ul class="list-unstyled navbar__nav__shop__icons">
+                                    <li><h6 class="mx-3">Shop pages</h6></li>
+                                    <li><a class="dropdown-item" href="#">Full width </a></li>
+                                    <li><a class="dropdown-item" href="#">Full width with category menu </a></li>
+                                    <li><a class="dropdown-item" href="#">Full width with big products </a></li>
+                                    <li><a class="dropdown-item" href="#">Fixed width </a></li>
+                                    <li><a class="dropdown-item" href="#">Fixed width & sidebar </a></li>
+                                    <li><a class="dropdown-item" href="#">Fixed width & masonry layout <span class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                    <li><a class="dropdown-item" href="#">Subcategories </a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-4">
+                                <ul class="list-unstyled navbar__nav__shop__icons">
+                                    <li><h6 class="mx-3">Product pages</h6></li>
+                                    <li><a class="dropdown-item" href="#">Product with sticky info </a></li>
+                                    <li><a class="dropdown-item" href="#">Product with background </a></li>
+                                    <li><a class="dropdown-item" href="#">Product standard  </a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-4">
+                                <div class="kyle-loftus">
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
                 </li>
+                
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="iconDropdown" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="btn border-0 dropdown-toggle navbar__nav__title" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Icons
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="iconDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                      </a>
+                    
+                      <ul class="dropdown-menu border-0 navbar__nav__icon__icons" style="min-width: 660px;">
+                        <div class="row mt-4">
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-spa"></i>
+                                <h6>Trousers</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-shirt"></i>
+                                <h6>Jackets</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-shirt"></i>
+                                <h6>T-Shirts</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-shirt"></i>
+                                <h6>Shirts</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-spa"></i>
+                                <h6>Pullovers</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa-solid fa-shirt"></i>
+                                <h6>Scarfs</h6>
+                            </div>
+                        </div>
+                        <div class="row mt-2 mb-5">
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-mortarboard"></i>
+                                <h6>Shorts</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-backpack4"></i>
+                                <h6>Underwear</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-watch"></i>
+                                <h6>Watches</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-backpack4"></i>
+                                <h6>Bags</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-mortarboard"></i>
+                                <h6>Caps</h6>
+                            </div>
+                            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-watch"></i>
+                                <h6>Accessories</h6>
+                            </div>
+                        </div>
+                        <div class="navbar__nav__icon__icons__text mt-2">
+                            <p>Don't miss our biggest sales this year. Use the code "SUMMER35" at checkout until Jun. 15! </p>
+                        </div>
+                      </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="btn border-0 dropdown-toggle navbar__nav__title" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Pages
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="pageDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                      </a>
+                    
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="docsDropdown" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="btn border-0 dropdown-toggle navbar__nav__title" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Docs
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="docsDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                      </a>
+                    
+                      <ul class="dropdown-menu border-0 navbar__nav__doc__icons">
+                        <li><a class="dropdown-item" href="#">Introduction </a></li>
+                        <li><a class="dropdown-item" href="#">Directory structure </a></li>
+                        <li><a class="dropdown-item" href="#">Gulp </a></li>
+                        <li><a class="dropdown-item" href="#">Customizing CSS </a></li>
+                        <li><a class="dropdown-item" href="#">Credits </a></li>
+                        <li><a class="dropdown-item" href="#">Changelog </a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="#">Bootstrap  </a></li>
+                        <li><a class="dropdown-item" href="#">Theme </a></li>
+                      </ul>
                 </li>
             </ul>
         </div>
@@ -134,11 +218,141 @@
                 <input type="text" placeholder="Search">
                 <i class="bi bi-search"></i>
             </form>
-            <i class="bi bi-person"></i>
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-bag-check"></i>
+            <div class="navbar__form__icons">
+                <i class="bi bi-person" id="person-icon"></i>
+                <div class="navbar__form__icons__wl">
+                    <i class="bi bi-heart"></i>
+                    <span>0</span>
+                </div>
+                <div class="navbar__form__icons__bag">
+                    <i class="bi bi-bag-check"></i>
+                    <span>0</span>
+                </div>
+                <i class="fa-solid fa-bars-staggered" id="openSidebar"></i>
+            </div>
         </div>
 
+        <!-- Login and register modal id=person-icon -->
+        <div class="modal modal-log-reg" id="loginRegisterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        
+                        <!-- Tab links -->
+                        <div>
+                            <button class="btn tablink fs-4 border-0" onclick="openTab(event, 'loginContent')">Login</button>
+                            <button class="btn tablink fs-4 border-0 ms-2" onclick="openTab(event, 'registerContent')">Register</button>
+                        </div>
+
+                        <button type="button" class="close text-muted border-0" data-dismiss="modal" aria-label="Close">
+                            <i class="bi bi-x-lg" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Content for login -->
+                        <div id="loginContent" class="tabcontent">
+                            <form>
+                                <div class="form-group">
+                                    <label class="form-label fw-bold" for="email">Email</label>
+                                    <input class="form-control" type="email" id="email">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label fw-bold" for="psw">Password</label><br>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#" class="form-text small">Forgot password?</a>
+                                        </div>
+                                    </div>
+                                    <input class="form-control" name="loginPassword" id="psw" placeholder="Password" type="password" required="" data-msg="Please enter your password">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <div class="custom-control custom-checkbox">
+                                      <input class="custom-control-input" id="loginRemember" type="checkbox">
+                                      <label class="custom-control-label text-muted" for="loginRemember"> <span class="text-sm">Remember me for 30 days</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-block btn-outline-dark w-100 mt-3" type="submit"><i class="fa fa-sign-in-alt me-2"></i> Log in</button>
+                                  </div>
+                            </form>
+                            <hr class="my-3 hr-text letter-spacing-2" data-content="OR">
+                            <div class="text-center">
+                                <button class="btn btn1" data-toggle="tooltip" title=""><i class="fa-fw fa-facebook-f fab"></i></button>
+                                <button class="btn btn2" data-toggle="tooltip" title=""><i class="fa-fw fa-google fab"></i></button>
+                              </div>
+                        </div>
+                        <!-- Content for register -->
+                        <div id="registerContent" class="tabcontent" style="display: none;">
+                            <form>
+                                <p class="text-muted text-sm">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit.</p>
+                                <div class="form-group">
+                                  <label class="form-label mt-2" for="registerName">Name</label>
+                                  <input class="form-control" id="registerName" type="text">
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-label mt-2" for="registerEmail">Email</label>
+                                  <input class="form-control" id="registerEmail" type="text">
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-label mt-2" for="registerPassword">Password</label>
+                                  <input class="form-control" id="registerPassword" type="password">
+                                </div>
+                                <div class="form-group text-center">
+                                  <button class="btn btn-block btn-outline-dark w-100 mt-3" type="submit"><i class="far fa-user me-2"></i>Register                       </button>
+                                </div>
+                              </form>
+                              <hr class="my-3 hr-text letter-spacing-2 mt-3" data-content="OR CONNECT WITH">
+                                <div class="text-center">
+                                    <button class="btn btn1" data-toggle="tooltip" title=""><i class="fa-fw fa-facebook-f fab"></i></button>
+                                    <button class="btn btn2" data-toggle="tooltip" title=""><i class="fa-fw fa-google fab"></i></button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu bar icon sidebar right -->
+        <div class="modal fade" id="sidebarRight" tabindex="-1" aria-labelledby="sidebarRightLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable position-absolute  m-0 p-0">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Your sidebar content goes here -->
+                        <div class="sidebar-content ms-4">
+                            <h5 class="modal-title mb-5 ms-3" id="sidebarRightLabel">Varkala</h5>
+                        <ul class="nav flex-column mb-5">
+                            <li class="nav-item active mb-3 ms-3"><a class="pl-0" href="#">Home </a></li>
+                            <li class="nav-item mb-2 ms-3"><a class="pl-0" href="#">Link</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link pl-0 disabled" href="#">Disabled</a></li>
+                            <li class="nav-item dropdown mb-2 ms-3"><a class="pl-0 dropdown-toggle" id="navbarDropdownMenuLink" href="#" data-target="#sidebarSubmenu" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Dropdown link</a>
+                              <div class="collapse" id="sidebarSubmenu">
+                                <ul class="nav flex-column ml-3">
+                                  <li class="nav-item"><a class="nav-link pl-0" href="#">Action</a></li>
+                                  <li class="nav-item"><a class="nav-link pl-0" href="#">Another action</a></li>
+                                  <li class="nav-item"><a class="nav-link pl-0" href="#">Something else here</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="list-inline mb-4 ms-3">
+                            <li class="list-inline-item me-2"><i class="fab fa-facebook-f"> </i></li>
+                            <li class="list-inline-item me-2"><i class="fab fa-twitter"> </i></li>
+                            <li class="list-inline-item me-2"><i class="bi bi-telephone me-2"></i><span style="font-size: .95rem;">020-800-456-747</span>
+                            </li>
+                          </ul>
+                          <p class="text-sm text-muted mb-0 ms-3">Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </nav>
     <main>
         <div class="swiper">
@@ -156,7 +370,7 @@
                         </div>
                         <div class="right">
                             <div class="clock">
-                                <img src="./assets/images/clock-transparent.png" alt="Clock">
+                                <img src="./assets/images/index/slider/clock-transparent.png" alt="Clock">
                             </div>
                         </div>
                     </div>
@@ -175,7 +389,7 @@
                         </div>
                         <div class="right">
                             <div class="chair">
-                                <img src="./assets/images/chair-transparent.png" alt="Chair">
+                                <img src="./assets/images/index/slider/chair-transparent.png" alt="Chair">
                             </div>
                         </div>
                     </div>
@@ -193,7 +407,7 @@
                         </div>
                         <div class="right">
                             <div class="box">
-                                <img src="./assets/images/box-transparent.png" alt="Box">
+                                <img src="./assets/images/index/slider/box-transparent.png" alt="Box">
                             </div>
                         </div>
                     </div>
@@ -224,7 +438,7 @@
             </div>
             <div class="row top__choice__second">
                 <div class="col-6 top__choice__second__book">
-                    <img src="./assets/images/book-sq.jpg" alt="Book-sq">
+                    <img src="./assets/images/index/popular/book-sq.jpg" alt="Book-sq">
                     <div class="top__choice__second__book__text">
                         <h3 class="fw-bold">Furniture <br> source <br> book</h3>
                         <p class="text-muted">$39.90</p>
@@ -232,7 +446,7 @@
                     </div>
                 </div>
                 <div class="col-6 top__choice__second__chair">
-                    <img src="./assets/images/chair-2-sq.jpg" alt="Chair2-sq">
+                    <img src="./assets/images/index/popular/chair-2-sq.jpg" alt="Chair2-sq">
                     <div class="top__choice__second__chair__text">
                         <h3 class="fw-bold">Norwegg <br> design <br> chair</h3>
                         <p class="text-muted">$39.90</p>
@@ -242,7 +456,7 @@
             </div>
             <div class="row top__choice__third">
                 <div class="col-6 top__choice__third__clock">
-                    <img src="./assets/images/clock-sq.jpg" alt="Clock-sq">
+                    <img src="./assets/images/index/popular/clock-sq.jpg" alt="Clock-sq">
                     <div class="top__choice__third__clock__text">
                         <h3 class="fw-bold">Sunn <br> Clock</h3>
                         <p class="text-muted">$89.90</p>
@@ -250,7 +464,7 @@
                     </div>
                 </div>
                 <div class="col-6 top__choice__third__box">
-                    <img src="./assets/images/box-sq.jpg" alt="Box-sq">
+                    <img src="./assets/images/index/popular/box-sq.jpg" alt="Box-sq">
                     <div class="top__choice__third__box__text">
                         <h3 class="fw-bold">Accessory <br> boxes</h3>
                         <p class="text-muted">$29.90</p>
@@ -260,7 +474,7 @@
             </div>
             <div class="row top__choice__fourth">
                 <div class="col-6 top__choice__fourth__clock">
-                    <img src="./assets/images/clock2-sq.jpg" alt="Clock2-sq">
+                    <img src="./assets/images/index/popular/clock2-sq.jpg" alt="Clock2-sq">
                     <div class="top__choice__fourth__clock__text">
                         <h3 class="fw-bold">Swiss <br> Minutes <br> Black</h3>
                         <p class="text-muted">$149.90</p>
@@ -268,7 +482,7 @@
                     </div>
                 </div>
                 <div class="col-6 top__choice__fourth__chair">
-                    <img src="./assets/images/chair3-3-sq.jpg" alt="Chair3-sq">
+                    <img src="./assets/images/index/popular/chair3-3-sq.jpg" alt="Chair3-sq">
                     <div class="top__choice__fourth__chair__text">
                         <h3 class="fw-bold">Korona <br> dining <br> room chair</h3>
                         <p class="text-muted">$39.90</p>
@@ -312,7 +526,55 @@
                     </div>
                     <div class="col-6 section__sale__week__image">
                         <div>
-                            <img src="./assets/images/chair-transparent.png" alt="Chair">
+                            <img src="./assets/images/index/slider/chair-transparent.png" alt="Chair">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__cart">
+            <div class="container mt-2">
+                <div class="row position-relative">
+                    <div class="col-3 position-relative">
+                        <div class="section__cart__img section__cart__img1">
+                            <img src="./assets/images/index/cart/chair-2.jpg" alt="Chair">
+                            <span class="badge">Fresh</span>
+                            <div class="section__cart__img__add">
+                                <a href="#">Add to cart</a>
+                                <span class="section__cart__img__add__span">
+                                    <a href="#"><i class="bi bi-heart"></i></a>
+                                    <a href="#"><i class="bi bi-arrows-fullscreen"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="section__cart__stars">
+                            <div class="section__cart__stars__title">
+                                <h4>Norwegg chair</h4>
+                                <span>$40.00</span>
+                            </div>
+                            <span class="section__cart__stars__icons">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                                <i class="bi bi-star-half"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3 position-relative">
+                        <div class="section__cart__img section__cart__img2">
+                            <img src="./assets/images/index/cart/book-2.jpg" alt="Book">
+                        </div>
+                    </div>
+                    <div class="col-3 position-relative">
+                        <div class="section__cart__img section__cart__img3">
+                            <img src="./assets/images/index/cart/chair2-2.jpg" alt="Chair2-2">
+                            <span class="badge fresh">Sale</span>
+                        </div>
+                    </div>
+                    <div class="col-3 position-relative">
+                        <div class="section__cart__img section__cart__img4">
+                            <img src="./assets/images/index/cart/chair3-3.jpg" alt="Chair3-3">
                         </div>
                     </div>
                 </div>
@@ -323,9 +585,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -12,7 +12,7 @@ body {
   font-family: "Vremena Grotesk Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/VremenaGrotesk/VremenaGrotesk.woff") format("woff");
+  src: url("../fonts/VremenaGrotesk/VremenaGrotesk.woff") format("woff");
 }
 
 .header {
@@ -65,6 +65,11 @@ body {
   font-size: 0.85rem;
   margin-left: 5px;
 }
+@media screen and (max-width: 767px) {
+  .header__start {
+    display: none;
+  }
+}
 .header__center {
   width: 31%;
   display: flex;
@@ -76,11 +81,21 @@ body {
   color: #343a40;
   margin: 0;
 }
+@media screen and (max-width: 767px) {
+  .header__center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+  }
+}
 .header__end {
-  width: 31%;
+  width: 28%;
+  padding-right: 8px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 5px;
 }
 .header__end__btn {
   border: none;
@@ -91,9 +106,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .header__end__btn:hover {
   cursor: pointer;
+}
+.header__end__btn::after {
+  border-top: 0;
+  margin-left: 0;
+  display: inline-block;
+  content: "\f107";
+  transition: all linear 0.25s;
+  transform: rotate(0);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.7rem;
+}
+.header__end__btn.rotate180::after {
+  transform: rotate(-180deg);
+}
+@media screen and (max-width: 767px) {
+  .header__end__btn {
+    width: 30%;
+  }
 }
 .header__end__dropdown {
   width: 20%;
@@ -116,16 +151,101 @@ body {
 .header__end__dropdown__menu a:hover {
   color: black;
 }
-
-.static-blob {
-  position: absolute;
+@media screen and (max-width: 767px) {
+  .header__end {
+    width: 42%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header__end {
+    display: none;
+  }
 }
 
 .navbar {
   width: 96%;
   margin: auto;
 }
-.navbar .dropdown-toggle::after {
+.navbar .navbar__nav__title {
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+}
+.navbar .navbar__nav__title:hover {
+  color: black;
+}
+.navbar .navbar__nav .navbar__nav__home__icons a {
+  color: #868e96;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+.navbar .navbar__nav .navbar__nav__home__icons a:hover {
+  color: black;
+}
+.navbar .navbar__nav .navbar__nav__shop__icons h6 {
+  margin-top: 50px;
+  font-size: 0.875rem;
+  color: #212529;
+  padding: 0.1rem 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.navbar .navbar__nav .navbar__nav__shop__icons a {
+  color: #868e96;
+  font-weight: 400;
+  font-size: 0.875rem;
+  padding: 0.2rem 2.5rem;
+}
+.navbar .navbar__nav .navbar__nav__shop__icons a:hover {
+  color: black;
+}
+.navbar .navbar__nav .navbar__nav__icon__icons i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: rgb(99, 95, 95);
+}
+.navbar .navbar__nav .navbar__nav__icon__icons h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in;
+}
+.navbar .navbar__nav .navbar__nav__icon__icons h6:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.navbar .navbar__nav .navbar__nav__icon__icons__text {
+  width: 100%;
+  height: 10vh;
+  background-color: #bcac76;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .navbar__nav .navbar__nav__icon__icons__text p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #212529;
+  margin: 0;
+}
+.navbar .navbar__nav .navbar__nav__doc__icons a {
+  color: #868e96;
+  font-weight: 400;
+  font-size: 0.875rem;
+  padding: 0.2rem 1rem;
+}
+.navbar .navbar__nav .navbar__nav__doc__icons a:hover {
+  color: black;
+}
+.navbar .navbar__nav .dropdown-toggle::after {
   border-top: 0;
   margin-left: 0;
   display: inline-block;
@@ -136,8 +256,16 @@ body {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
-.navbar .navbar-nav .show .dropdown-toggle::after {
+.navbar .navbar__nav .dropdown-toggle.rotate::after {
   transform: rotate(-180deg);
+}
+.navbar .navbar__nav .kyle-loftus {
+  width: 100%;
+  height: 55vh;
+  background-image: url("../kyle-loftus.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .navbar__form {
   width: 40%;
@@ -148,11 +276,12 @@ body {
   gap: 10px;
 }
 .navbar__form__input {
+  width: 60%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 35px;
+  margin-right: 65px;
 }
 .navbar__form__input input {
   width: 100%;
@@ -182,6 +311,191 @@ body {
   position: absolute;
   right: 2%;
   font-size: 1rem;
+}
+.navbar__form__icons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.navbar__form__icons i {
+  font-size: 1.3rem;
+  transition: all 0.3s ease-in;
+}
+.navbar__form__icons i:hover {
+  cursor: pointer;
+  color: #bcac76;
+}
+.navbar__form__icons__wl {
+  position: relative;
+}
+.navbar__form__icons__wl i {
+  position: relative;
+}
+.navbar__form__icons__wl span {
+  position: absolute;
+  top: -4px;
+  left: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0.685rem;
+  color: #fff;
+  padding: 10px;
+  background-color: #bcac76;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__form__icons__bag {
+  position: relative;
+}
+.navbar__form__icons__bag i {
+  position: relative;
+}
+.navbar__form__icons__bag span {
+  position: absolute;
+  top: -4px;
+  left: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 0.685rem;
+  color: #fff;
+  padding: 10px;
+  background-color: #bcac76;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .modal-log-reg .col-auto a {
+  color: #bcac76;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 0.875rem;
+  color: #bcac76;
+  transition: all 0.2s ease-in;
+}
+.navbar .modal-log-reg .col-auto a:hover {
+  color: #9a884b;
+  text-decoration: underline;
+}
+.navbar .modal-log-reg .hr-text {
+  position: relative;
+  height: 1.5rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  line-height: 1em;
+}
+.navbar .modal-log-reg .hr-text:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background: rgba(0, 0, 0, 0.1);
+}
+.navbar .modal-log-reg .hr-text:after {
+  display: inline-block;
+  position: relative;
+  padding: 0 0.5em;
+  content: attr(data-content);
+  color: darkslategray;
+  background-color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+.navbar .modal-log-reg .btn1 {
+  color: #bcac76;
+  border-color: #bcac76;
+}
+.navbar .modal-log-reg .btn1:hover {
+  color: #212529;
+  background-color: #bcac76;
+}
+.navbar .modal-log-reg .btn2 {
+  color: #868e96;
+  border-color: #868e96;
+}
+.navbar .modal-log-reg .btn2:hover {
+  color: #fff;
+  background-color: #868e96;
+}
+.navbar .modal-log-reg #registerContent p {
+  font-size: 0.875rem;
+}
+.navbar .modal-log-reg .close {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.navbar .modal-log-reg .close:hover {
+  animation: spin 0.3s linear;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.navbar #sidebarRight .modal-content {
+  width: 36%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+}
+.navbar #sidebarRight .sidebar-content {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.navbar #sidebarRight .sidebar-content h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.navbar #sidebarRight .sidebar-content a {
+  font-size: 1rem;
+  color: #868e96;
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.navbar #sidebarRight .sidebar-content a:hover {
+  color: #9a884b;
+}
+.navbar #sidebarRight .sidebar-content p {
+  width: 100%;
+  font-size: 0.87rem;
+  color: #868e96;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+body {
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "Vremena Grotesk Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/VremenaGrotesk/VremenaGrotesk.woff") format("woff");
+}
+
+.static-blob {
+  position: absolute;
 }
 
 main {
@@ -249,6 +563,7 @@ main .slider .left .write a {
   border: 1px solid #bcac76;
   padding: 5px;
   transition: 0.5s ease-in;
+  font-size: 0.8rem;
 }
 main .slider .left .write a:hover {
   color: black;
@@ -265,7 +580,7 @@ main .slider .right {
 main .slider .right .clock {
   width: 100%;
   height: 70vh;
-  background-image: url("../../images/blob-clock.svg");
+  background-image: url("../../images/index/slider/blob-clock.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -284,7 +599,7 @@ main .slider .right .clock img {
 main .slider .right .chair {
   width: 100%;
   height: 70vh;
-  background-image: url("../../images/blob-chair.svg");
+  background-image: url("../../images/index/slider/blob-chair.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -303,7 +618,7 @@ main .slider .right .chair img {
 main .slider .right .box {
   width: 100%;
   height: 70vh;
-  background-image: url("../../images/blob-box.svg");
+  background-image: url("../../images/index/slider/blob-box.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -589,7 +904,7 @@ main .section__sale__blob {
   height: 70vh;
   top: 18%;
   left: -21%;
-  background-image: url("../../images/blob-sale.svg");
+  background-image: url("../../images/index/popular/blob-sale.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -653,4 +968,80 @@ main .section__sale__week__image div img {
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+}
+main .section__cart {
+  width: 100%;
+  position: relative;
+}
+main .section__cart__img {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+}
+main .section__cart__img img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+}
+main .section__cart__img span.badge {
+  position: absolute;
+  top: 4%;
+  left: 5%;
+  background-color: #877f64;
+  padding: 5px;
+  text-align: center;
+}
+main .section__cart__img__add {
+  width: 100%;
+  height: 7vh;
+  opacity: 0;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .section__cart__img1 {
+  background-image: url("../../images/index/cart/chair.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+main .section__cart__img2 {
+  background-image: url("../../images/index/cart/book.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+main .section__cart__img3 {
+  background-image: url("../../images/index/cart/chair2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+main .section__cart__img4 {
+  background-image: url("../../images/index/cart/chair3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+main .section__cart .col-3 {
+  cursor: pointer;
+}
+main .section__cart .col-3:hover .section__cart__stars__icons {
+  opacity: 1;
+}
+main .section__cart .col-3:hover .section__cart__img__add {
+  opacity: 1;
+}
+main .section__cart .col-3:hover .section__cart__img img {
+  opacity: 1;
+}
+main .section__cart__stars {
+  display: flex;
+}
+main .section__cart__stars__icons {
+  opacity: 0;
 }/*# sourceMappingURL=main.css.map */

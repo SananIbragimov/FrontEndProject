@@ -3,7 +3,7 @@
         font-family: '#{$family}';
         font-style: normal;
         font-weight: #{$weight};
-        src: url('../../fonts/VremenaGrotesk/#{$filename}.woff') format('woff');
+        src: url('../fonts/VremenaGrotesk/#{$filename}.woff') format('woff');
     }
 }
 
@@ -46,4 +46,17 @@
     font-weight: $fontWeight;
     line-height: $lineHeight;
     margin-bottom: $marginBottom;
+}
+
+@mixin customStyles {
+    position: absolute;
+    top: -4px;
+    left: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    font-size: .685rem;
+    color: #fff;
+    padding: 10px;
+    background-color: #bcac76;
 }
