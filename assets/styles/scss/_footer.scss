@@ -1,0 +1,155 @@
+@import "./_mixin.scss";
+
+body {
+    font-size: 1rem;
+    @include fontFace('Vremena Grotesk Regular', 400, 'VremenaGrotesk');
+    overflow-x: hidden;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+
+    .footer__trans {
+        width: 100%;
+        height: 40vh;
+        background-color: #f8f9fa;
+        @include flexContainer(center, center);
+
+        &__column {
+            @include flexContainer(center, center, 15px);
+
+            i {
+                font-size: 1.3rem;
+                color: gray;
+                align-self: flex-start;
+                margin-top: 10px;
+            }
+
+            &__text {
+                @include flexContainer(center, flex-start, 5px);
+                flex-direction: column;
+
+                h6 {
+                    font-size: .875rem;
+                    font-weight: 700;
+                    line-height: 1.1;
+                    color: #212529;
+                    margin: 0;
+                }
+
+                p {
+                    line-height: 1.6;
+                    font-size: .875rem;
+                    font-weight: 300;
+                    color: #868e96;
+                }
+            }
+        }
+    }
+
+    .footer__company {
+        width: 100%;
+
+        &__column {
+            @include flexContainer(flex-start, flex-start, 3px);
+            flex-direction: column;
+
+            h6 {
+                font-size: 1rem;
+                letter-spacing: .09rem;
+                color: #212529;
+                line-height: 1.3;
+                font-weight: 700;
+                margin-bottom: 1.2rem;
+                align-self: stretch;
+            }
+
+            p {
+                font-size: .875rem;
+                color: #868e96;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+                @include flexContainer(center, flex-start, 5px);
+                flex-direction: column;
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        font-size: .875rem;
+                        font-weight: 400;
+                        line-height: 1.6;
+                        color: #212529;
+                        text-decoration: none;
+                        transition: all .3s ease-in-out;
+
+                        &:hover {
+                            color: #212529 !important;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            form {
+                width: 80%;
+                border-bottom: .1px solid gray;
+                @include flexContainer(space-between, center);
+                transition: all .2s ease-in;
+
+                &:hover {
+                    border-bottom: .8px solid #212529;
+                }
+
+                input {
+                    border: none;
+                    outline: none;
+                }
+
+                i {
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .footer__bottom {
+        width: 100%;
+        margin-top: 7%;
+
+        &__left {
+            p {
+                font-size: .875rem;
+                color: #adb5bd;
+            }
+        }
+
+        &__right {
+            ul {
+                margin: 0;
+                padding: 0;
+                @include flexContainer(center, center, 15px);
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        text-decoration: none;
+                        font-size: .875rem;
+                        color: #adb5bd;
+                        transition: all .2s ease-in;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

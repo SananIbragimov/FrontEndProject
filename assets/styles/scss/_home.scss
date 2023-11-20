@@ -479,20 +479,23 @@ main {
         }
     }
 
-    .section__cart{
+    .section__cart {
         width: 100%;
         position: relative;
-        &__img{
+
+        &__img {
             width: 100%;
             height: 60vh;
             position: relative;
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
                 transition: all .2s ease-in;
                 opacity: 0;
             }
-            span.badge{
+
+            span.badge {
                 position: absolute;
                 top: 4%;
                 left: 5%;
@@ -500,7 +503,8 @@ main {
                 padding: 5px;
                 text-align: center;
             }
-            &__add{
+
+            &__add {
                 width: 100%;
                 height: 7vh;
                 opacity: 0;
@@ -512,45 +516,55 @@ main {
                 align-items: center;
             }
         }
-        &__img1{
+
+        &__img1 {
             background-image: url("../../images/index/cart/chair.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: 100%;
         }
-        &__img2{
+
+        &__img2 {
             background-image: url("../../images/index/cart/book.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: 100%;
         }
-        &__img3{
+
+        &__img3 {
             background-image: url("../../images/index/cart/chair2.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: 100%;
         }
-        &__img4{
+
+        &__img4 {
             background-image: url("../../images/index/cart/chair3.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: 100%;
         }
-        .col-3{
+
+        .col-3 {
             cursor: pointer;
-            &:hover .section__cart__stars__icons{
+
+            &:hover .section__cart__stars__icons {
                 opacity: 1;
             }
-           &:hover .section__cart__img__add{
+
+            &:hover .section__cart__img__add {
                 opacity: 1;
             }
-            &:hover .section__cart__img img{
+
+            &:hover .section__cart__img img {
                 opacity: 1;
             }
         }
-        &__stars{
+
+        &__stars {
             display: flex;
-            &__icons{
+
+            &__icons {
                 opacity: 0;
             }
         }

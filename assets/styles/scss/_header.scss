@@ -2,12 +2,14 @@
 
 $small: 575px;
 $medium: 767px;
+$large: 991px;
 
 body {
     font-size: 1rem;
     @include fontFace('Vremena Grotesk Regular', 400, 'VremenaGrotesk');
     overflow-x: hidden;
 }
+
 .header {
     width: 100%;
     height: 8vh;
@@ -59,9 +61,10 @@ body {
                 }
             }
         }
+
         @media screen and (max-width: $medium) {
             display: none;
-          }
+        }
     }
 
     &__center {
@@ -73,10 +76,11 @@ body {
             color: #343a40;
             margin: 0;
         }
+
         @media screen and (max-width: $medium) {
             @include flexContainer(flex-start, center);
             padding-left: 15px;
-          }
+        }
     }
 
     &__end {
@@ -92,6 +96,7 @@ body {
             line-height: 1.6;
             @include flexContainer(center, center);
             width: 100%;
+
             &:hover {
                 cursor: pointer;
             }
@@ -108,12 +113,14 @@ body {
                 font-weight: 900;
                 font-size: .7rem;
             }
+
             &.rotate180::after {
                 transform: rotate(-180deg);
             }
+
             @media screen and (max-width: $medium) {
                 width: 30%;
-              }
+            }
         }
 
         &__dropdown {
@@ -147,14 +154,15 @@ body {
             width: 42%;
             @include flexContainer(flex-end, center);
             padding-right: 5px;
-          }
+        }
 
         @media screen and (max-width: $small) {
             display: none;
-          }
+        }
 
     }
 }
+
 .navbar {
     width: 96%;
     margin: auto;
@@ -276,7 +284,7 @@ body {
         .kyle-loftus {
             width: 100%;
             height: 55vh;
-            background-image: url("../kyle-loftus.jpg");
+            background-image: url("../../images/navbar/kyle-loftus.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -461,37 +469,42 @@ body {
             }
         }
 
-        
+
     }
 
-    #sidebarRight{
-        .modal-content{
+    #sidebarRight {
+        .modal-content {
             width: 36%;
             height: 100vh;
             position: fixed;
             right: 0;
         }
-        .sidebar-content{
+
+        .sidebar-content {
             width: 70%;
             @include flexContainer(center, flex-start);
             flex-direction: column;
-            h5{
+
+            h5 {
                 font-size: 1.25rem;
                 font-weight: 700;
                 line-height: 1.6;
-                
+
             }
-            a{
+
+            a {
                 font-size: 1rem;
                 color: #868e96;
                 transition: all .3s ease-in;
                 text-decoration: none;
                 padding-bottom: 10px;
-                &:hover{
+
+                &:hover {
                     color: #9a884b;
                 }
             }
-            p{
+
+            p {
                 width: 100%;
                 font-size: .87rem;
                 color: #868e96;

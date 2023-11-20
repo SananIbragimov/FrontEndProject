@@ -12,14 +12,14 @@
         $('.header__end__btn').click(function () {
             var rotation = $(this).hasClass('rotate180') ? 'rotate(0deg)' : 'rotate(180deg)';
             $(this).toggleClass('rotate180');
-            $(this).find('i').css('transform', 'rotateY(180deg)'); // Sağdan dönme
+            $(this).find('i').css('transform', 'rotateY(180deg)');
         });
     
-        // Menü açıkken herhangi bir yere tıklandığında simge durumunu sıfırla
+        
         $(document).on('click', function (e) {
             if (!$('.header__end__dropdown').is(e.target) && $('.header__end__dropdown').has(e.target).length === 0) {
                 $('.header__end__btn').removeClass('rotate180');
-                $('.header__end__btn i').css('transform', 'rotateY(0deg)'); // Sağdan dönme sıfırlama
+                $('.header__end__btn i').css('transform', 'rotateY(0deg)');
             }
         });
     });
