@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/styles/css/main.css">
     <title>Varkala E-commerce</title>
 </head>
@@ -62,7 +62,6 @@
             d="M60.5,-43.1C76,-28.9,84.3,-3.9,78,15.4C71.7,34.8,50.8,48.4,28.5,59C6.3,69.6,-17.3,77.2,-35.2,69.8C-53.1,62.4,-65.3,40.1,-70.5,16.3C-75.7,-7.4,-73.9,-32.5,-61,-46.1C-48.1,-59.8,-24,-62,-0.8,-61.4C22.5,-60.8,45.1,-57.4,60.5,-43.1Z"
             transform="translate(100 100)" />
     </svg>
-
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="./index.html">Varkala</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -92,7 +91,7 @@
                         Shop
                     </a>
 
-                    <ul class="dropdown-menu border-0" style="min-width: 700px; margin-top: 50px; margin-right: 50px;">
+                    <ul class="dropdown-menu border-0" style="min-width: 700px; margin-top: 20px; margin-right: 50px;">
                         <div class="row">
                             <div class="col-4">
                                 <ul class="list-unstyled navbar__nav__shop__icons">
@@ -238,156 +237,14 @@
                         <i class="bi bi-heart"></i>
                         <span>0</span>
                     </div>
-                    <div class="navbar__form__icons__bag">
+                    <div class="navbar__form__icons__bag" id="openModalBtn">
                         <i class="bi bi-bag-check"></i>
-                        <span>0</span>
+                        <span id="cart-count">0</span>
                     </div>
                 </div>
                 <i class="fa-solid fa-bars-staggered" id="openSidebar"></i>
             </div>
         </div>
-
-        <!-- Login and register modal id=person-icon -->
-        <div class="modal modal-log-reg" id="loginRegisterModal" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-
-                        <!-- Tab links -->
-                        <div>
-                            <button class="btn tablink fs-4 border-0"
-                                onclick="openTab(event, 'loginContent')">Login</button>
-                            <button class="btn tablink fs-4 border-0 ms-2"
-                                onclick="openTab(event, 'registerContent')">Register</button>
-                        </div>
-
-                        <button type="button" class="close text-muted border-0" data-dismiss="modal" aria-label="Close">
-                            <i class="bi bi-x-lg" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Content for login -->
-                        <div id="loginContent" class="tabcontent">
-                            <form>
-                                <div class="form-group">
-                                    <label class="form-label fw-bold" for="email">Email</label>
-                                    <input class="form-control" type="email" id="email">
-                                </div>
-                                <div class="form-group mt-3">
-                                    <div class="row">
-                                        <div class="col">
-                                            <label class="form-label fw-bold" for="psw">Password</label><br>
-                                        </div>
-                                        <div class="col-auto">
-                                            <a href="#" class="form-text small">Forgot password?</a>
-                                        </div>
-                                    </div>
-                                    <input class="form-control" name="loginPassword" id="psw" placeholder="Password"
-                                        type="password" required="" data-msg="Please enter your password">
-                                </div>
-                                <div class="form-group mt-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="loginRemember" type="checkbox">
-                                        <label class="custom-control-label text-muted" for="loginRemember"> <span
-                                                class="text-sm">Remember me for 30 days</span></label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-block btn-outline-dark w-100 mt-3" type="submit"><i
-                                            class="fa fa-sign-in-alt me-2"></i> Log in</button>
-                                </div>
-                            </form>
-                            <hr class="my-3 hr-text letter-spacing-2" data-content="OR">
-                            <div class="text-center">
-                                <button class="btn btn1" data-toggle="tooltip" title=""><i
-                                        class="fa-fw fa-facebook-f fab"></i></button>
-                                <button class="btn btn2" data-toggle="tooltip" title=""><i
-                                        class="fa-fw fa-google fab"></i></button>
-                            </div>
-                        </div>
-                        <!-- Content for register -->
-                        <div id="registerContent" class="tabcontent" style="display: none;">
-                            <form>
-                                <p class="text-muted text-sm">The bedding was hardly able to cover it and seemed ready
-                                    to slide off any moment. His many legs, pit.</p>
-                                <div class="form-group">
-                                    <label class="form-label mt-2" for="registerName">Name</label>
-                                    <input class="form-control" id="registerName" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label mt-2" for="registerEmail">Email</label>
-                                    <input class="form-control" id="registerEmail" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label mt-2" for="registerPassword">Password</label>
-                                    <input class="form-control" id="registerPassword" type="password">
-                                </div>
-                                <div class="form-group text-center">
-                                    <button class="btn btn-block btn-outline-dark w-100 mt-3" type="submit"><i
-                                            class="far fa-user me-2"></i>Register </button>
-                                </div>
-                            </form>
-                            <hr class="my-3 hr-text letter-spacing-2 mt-3" data-content="OR CONNECT WITH">
-                            <div class="text-center">
-                                <button class="btn btn1" data-toggle="tooltip" title=""><i
-                                        class="fa-fw fa-facebook-f fab"></i></button>
-                                <button class="btn btn2" data-toggle="tooltip" title=""><i
-                                        class="fa-fw fa-google fab"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Menu bar icon sidebar right -->
-        <div class="modal fade" id="sidebarRight" tabindex="-1" aria-labelledby="sidebarRightLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable position-absolute  m-0 p-0">
-                <div class="modal-content">
-                    <div class="modal-header border-0">
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Your sidebar content goes here -->
-                        <div class="sidebar-content ms-4">
-                            <h5 class="modal-title mb-5 ms-3" id="sidebarRightLabel">Varkala</h5>
-                            <ul class="nav flex-column mb-5">
-                                <li class="nav-item active mb-3 ms-3"><a class="pl-0" href="#">Home </a></li>
-                                <li class="nav-item mb-2 ms-3"><a class="pl-0" href="#">Link</a></li>
-                                <li class="nav-item mb-2"><a class="nav-link pl-0 disabled" href="#">Disabled</a></li>
-                                <li class="nav-item dropdown mb-2 ms-3"><a class="pl-0 dropdown-toggle"
-                                        id="navbarDropdownMenuLink" href="#" data-target="#sidebarSubmenu"
-                                        data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Dropdown
-                                        link</a>
-                                    <div class="collapse" id="sidebarSubmenu">
-                                        <ul class="nav flex-column ml-3">
-                                            <li class="nav-item"><a class="nav-link pl-0" href="#">Action</a></li>
-                                            <li class="nav-item"><a class="nav-link pl-0" href="#">Another action</a>
-                                            </li>
-                                            <li class="nav-item"><a class="nav-link pl-0" href="#">Something else
-                                                    here</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="list-inline mb-4 ms-3">
-                                <li class="list-inline-item me-2"><i class="fab fa-facebook-f"> </i></li>
-                                <li class="list-inline-item me-2"><i class="fab fa-twitter"> </i></li>
-                                <li class="list-inline-item me-2"><i class="bi bi-telephone me-2"></i><span
-                                        style="font-size: .95rem;">020-800-456-747</span>
-                                </li>
-                            </ul>
-                            <p class="text-sm text-muted mb-0 ms-3">Samsa was a travelling salesman - and above it there
-                                hung a picture that he had recently cut out of an illustrated magazine and housed in a
-                                nice, gilded frame.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </nav>
     <main>
         <div class="swiper">
@@ -567,54 +424,38 @@
                 </div>
             </div>
         </section>
+
         <section class="section__cart">
             <div class="container mt-2">
-                <div class="row position-relative">
-                    <div class="col-3 position-relative">
-                        <div class="section__cart__img section__cart__img1">
-                            <img src="./assets/images/index/cart/chair-2.jpg" alt="Chair">
-                            <span class="badge">Fresh</span>
-                            <div class="section__cart__img__add">
-                                <a href="#">Add to cart</a>
-                                <span class="section__cart__img__add__span">
-                                    <a href="#"><i class="bi bi-heart"></i></a>
-                                    <a href="#"><i class="bi bi-arrows-fullscreen"></i></a>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="section__cart__stars">
-                            <div class="section__cart__stars__title">
-                                <h4>Norwegg chair</h4>
-                                <span>$40.00</span>
-                            </div>
-                            <span class="section__cart__stars__icons">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i>
-                                <i class="bi bi-star-half"></i>
-                            </span>
-                        </div>
+                <div class="row">
+                    <div class="col-12 section__cart__title">
+                        <h2>New Arrivals</h2>
+                        <p class="text-muted mb-5">One morning, when Gregor Samsa woke from troubled dreams, he found
+                            himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and
+                            if he lifted his head a little he could see his brown belly, slightly domed and divided by
+                            arches into stiff sections</p>
                     </div>
-                    <div class="col-3 position-relative">
-                        <div class="section__cart__img section__cart__img2">
-                            <img src="./assets/images/index/cart/book-2.jpg" alt="Book">
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 section__cart__list">
+                        <ul>
+                            <li><a href="#" style="color: #212529;">All Products</a></li>
+                            <li><a href="#">Chairs </a></li>
+                            <li><a href="#">Books</a></li>
+                            <li><a href="#">Clothes</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
                     </div>
-                    <div class="col-3 position-relative">
-                        <div class="section__cart__img section__cart__img3">
-                            <img src="./assets/images/index/cart/chair2-2.jpg" alt="Chair2-2">
-                            <span class="badge fresh">Sale</span>
-                        </div>
+                    <div class="col-6 section__cart__list2">
+                        <a href="#">All products</a>
                     </div>
-                    <div class="col-3 position-relative">
-                        <div class="section__cart__img section__cart__img4">
-                            <img src="./assets/images/index/cart/chair3-3.jpg" alt="Chair3-3">
-                        </div>
-                    </div>
+                </div>
+                <div class="row position-relative all-columns" id="product-container">
+
                 </div>
             </div>
         </section>
+
         <section class=" summer mt-5 mb-5">
             <div class="summer__sale">
                 <div class="summer__sale__blob">
@@ -630,6 +471,7 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer__trans">
             <div class="container">
@@ -687,9 +529,9 @@
                             <li><a href="#" class="text-muted">Shop</a></li>
                         </ul>
                     </div>
-                    
+
                     <div class="col-md-2 col-sm-12 footer__company__column">
-                        <h6 class="accordion-header"  onclick="toggleAccordion(this)">Company</h6>
+                        <h6 class="accordion-header" onclick="toggleAccordion(this)">Company</h6>
                         <ul class="accordion-content">
                             <li><a href="#" class="text-muted">Login</a></li>
                             <li><a href="#" class="text-muted">Register</a></li>
@@ -699,7 +541,7 @@
                         </ul>
                     </div>
                     <div class="col-md-2 col-sm-12 footer__company__column">
-                        <h6 class="accordion-header"  onclick="toggleAccordion(this)">Your account</h6>
+                        <h6 class="accordion-header" onclick="toggleAccordion(this)">Your account</h6>
                         <ul class="accordion-content">
                             <li><a href="#" class="text-muted">Login</a></li>
                             <li><a href="#" class="text-muted">Register</a></li>
@@ -729,14 +571,181 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="./assets/scripts/js/swiper.js"></script>
-    <script src="./assets/scripts/js/main.js"></script>
+    <!-- Login and register modal id=person-icon -->
+    <div class="modal modal-log-reg" id="loginRegisterModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <!-- Tab links -->
+                    <div>
+                        <button class="btn tablink fs-4 border-0"
+                            onclick="openTab(event, 'loginContent')">Login</button>
+                        <button class="btn tablink fs-4 border-0 ms-2"
+                            onclick="openTab(event, 'registerContent')">Register</button>
+                    </div>
+
+                    <button type="button" class="close text-muted border-0" data-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Content for login -->
+                    <div id="loginContent" class="tabcontent">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label fw-bold" for="email">Email</label>
+                                <input class="form-control" type="email" id="email">
+                            </div>
+                            <div class="form-group mt-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label fw-bold" for="psw">Password</label><br>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#" class="form-text small">Forgot password?</a>
+                                    </div>
+                                </div>
+                                <input class="form-control" name="loginPassword" id="psw" placeholder="Password"
+                                    type="password" required="" data-msg="Please enter your password">
+                            </div>
+                            <div class="form-group mt-3">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" id="loginRemember" type="checkbox">
+                                    <label class="custom-control-label text-muted" for="loginRemember"> <span
+                                            class="text-sm">Remember me for 30 days</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-block btn-outline-dark w-100 mt-3" type="submit"><i
+                                        class="fa fa-sign-in-alt me-2"></i> Log in</button>
+                            </div>
+                        </form>
+                        <hr class="my-3 hr-text letter-spacing-2" data-content="OR">
+                        <div class="text-center">
+                            <button class="btn btn1" data-toggle="tooltip" title=""><i
+                                    class="fa-fw fa-facebook-f fab"></i></button>
+                            <button class="btn btn2" data-toggle="tooltip" title=""><i
+                                    class="fa-fw fa-google fab"></i></button>
+                        </div>
+                    </div>
+                    <!-- Content for register -->
+                    <div id="registerContent" class="tabcontent" style="display: none;">
+                        <form>
+                            <p class="text-muted text-sm">The bedding was hardly able to cover it and seemed ready
+                                to slide off any moment. His many legs, pit.</p>
+                            <div class="form-group">
+                                <label class="form-label mt-2" for="registerName">Name</label>
+                                <input class="form-control" id="registerName" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label mt-2" for="registerEmail">Email</label>
+                                <input class="form-control" id="registerEmail" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label mt-2" for="registerPassword">Password</label>
+                                <input class="form-control" id="registerPassword" type="password">
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-block btn-outline-dark w-100 mt-3" type="submit"><i
+                                        class="far fa-user me-2"></i>Register </button>
+                            </div>
+                        </form>
+                        <hr class="my-3 hr-text letter-spacing-2 mt-3" data-content="OR CONNECT WITH">
+                        <div class="text-center">
+                            <button class="btn btn1" data-toggle="tooltip" title=""><i
+                                    class="fa-fw fa-facebook-f fab"></i></button>
+                            <button class="btn btn2" data-toggle="tooltip" title=""><i
+                                    class="fa-fw fa-google fab"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu bar icon sidebar right -->
+    <div class="modal fade" id="sidebarRight" tabindex="-1" aria-labelledby="sidebarRightLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable position-absolute  m-0 p-0">
+            <div class="modal-content">
+                <div class="modal-header border-0 d-flex justify-content-end">
+
+                    <button type="button text-muted" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Your sidebar content goes here -->
+                    <div class="sidebar-content ms-4">
+                        <h5 class="modal-title mb-5 ms-3" id="sidebarRightLabel">Varkala</h5>
+                        <ul class="nav flex-column mb-5">
+                            <li class="nav-item active mb-3 ms-3"><a class="pl-0" href="#">Home </a></li>
+                            <li class="nav-item mb-2 ms-3"><a class="pl-0" href="#">Link</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link pl-0 disabled" href="#">Disabled</a></li>
+                            <li class="nav-item dropdown mb-2 ms-3"><a class="pl-0 dropdown-toggle"
+                                    id="navbarDropdownMenuLink" href="#" data-target="#sidebarSubmenu"
+                                    data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Dropdown
+                                    link</a>
+                                <div class="collapse" id="sidebarSubmenu">
+                                    <ul class="nav flex-column ml-3">
+                                        <li class="nav-item"><a class="nav-link pl-0" href="#">Action</a></li>
+                                        <li class="nav-item"><a class="nav-link pl-0" href="#">Another action</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link pl-0" href="#">Something else
+                                                here</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-inline mb-4 ms-3">
+                            <li class="list-inline-item me-2"><i class="fab fa-facebook-f"> </i></li>
+                            <li class="list-inline-item me-2"><i class="fab fa-twitter"> </i></li>
+                            <li class="list-inline-item me-2"><i class="bi bi-telephone me-2"></i><span
+                                    style="font-size: .95rem;">020-800-456-747</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-muted mb-0 ms-3">Samsa was a travelling salesman - and above it there
+                            hung a picture that he had recently cut out of an illustrated magazine and housed in a
+                            nice, gilded frame.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Add to cart -->
+    <div class="modal modal__product" id="myModal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <div class="modal__product__section">
+                <div class="modal__product__section__cart cart-container">
+
+                </div>
+                <div class="modal__product__section__total total-price">
+
+                </div>
+                <div class="modal__product__section__btn">
+                    <a href="#" class="btn product-btn btn-outline-dark btn-block text-align-center">View cart</a>
+                    <a href="#" class="btn product-btn2 btn-dark btn-block">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+<script src="./assets/scripts/js/swiper.js"></script>
+<script src="./assets/scripts/js/accordion.js"></script>
+<script src="./assets/scripts/js/countdown.js"></script>
+<script src="./assets/scripts/js/navbar.js"></script>
+<script type="module" src="./assets/scripts/js/cart.js"></script>
+<script src="./assets/scripts/js/main.js"></script>
 
 </html>

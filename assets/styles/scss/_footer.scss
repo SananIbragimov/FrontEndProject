@@ -11,11 +11,23 @@ footer {
         &__column {
             @include flexContainer(center, center, 15px);
 
+            @media screen and (max-width: $medium) {
+                @include flexContainer(flex-start, center, 15px);
+            }
+
+            @media screen and (max-width: $small) {
+                width: 51%;
+                padding: 5px;
+                margin: auto;
+                @include flexContainer(flex-start, center, 15px);
+            }
+
             i {
                 font-size: 1.3rem;
                 color: gray;
                 align-self: flex-start;
                 margin-top: 10px;
+
             }
 
             &__text {
@@ -46,7 +58,7 @@ footer {
         &__column {
             @include flexContainer(flex-start, flex-start, 3px);
             flex-direction: column;
-            
+
 
             h6 {
                 font-size: 1rem;
@@ -56,7 +68,8 @@ footer {
                 font-weight: 700;
                 margin-bottom: .9rem;
                 align-self: stretch;
-                @media screen and (max-width: $medium){
+
+                @media screen and (max-width: $medium) {
                     margin: .5rem 0 !important;
                 }
             }
@@ -64,7 +77,8 @@ footer {
             p {
                 font-size: .875rem;
                 color: #868e96;
-                @media screen and (max-width: $medium){
+
+                @media screen and (max-width: $medium) {
                     margin-left: 0 !important;
                 }
             }
@@ -75,14 +89,15 @@ footer {
                 margin-top: 3% !important;
                 @include flexContainer(center, flex-start, 2px);
                 flex-direction: column;
-                @media screen and (max-width: $medium){
+
+                @media screen and (max-width: $medium) {
                     margin: 0 0 !important;
                 }
 
                 li {
                     list-style-type: none;
 
-                    a{
+                    a {
                         font-size: .875rem;
                         font-weight: 400;
                         line-height: 1.6;
@@ -90,11 +105,13 @@ footer {
                         text-decoration: none;
                         transition: all .3s ease-in-out;
                         position: relative;
-                        &:hover{
+
+                        &:hover {
                             color: #212529 !important;
                             text-decoration: none;
                         }
-                        &:after{
+
+                        &:after {
                             content: "";
                             position: absolute;
                             left: 0;
@@ -104,6 +121,7 @@ footer {
                             background-color: #000;
                             transition: width 0.3s ease;
                         }
+
                         &:hover:after {
                             width: 100%;
                         }
@@ -117,6 +135,7 @@ footer {
                 @include flexContainer(space-between, center);
                 transition: all .2s ease-in;
 
+
                 &:hover {
                     border-bottom: .8px solid #212529;
                 }
@@ -124,40 +143,55 @@ footer {
                 input {
                     border: none;
                     outline: none;
+
+                    @media screen and (max-width: $large) {
+                        &::placeholder {
+                            font-size: .9rem;
+                        }
+
+                        width: 90%;
+                    }
                 }
 
                 i {
                     font-size: 1.6rem;
                     cursor: pointer;
+
+                    @media screen and (max-width: $large) {
+                        font-size: 1.2rem;
+                    }
                 }
-                @media screen and (max-width: $medium){
+
+                @media screen and (max-width: $medium) {
                     width: 100%;
                     margin-bottom: 1rem;
                     margin-left: 0 !important;
                 }
             }
-            @media screen and (max-width: $medium){
+
+            @media screen and (max-width: $medium) {
                 .accordion-content {
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height 0.3s ease;
                 }
-                
+
                 .accordion-header::after {
                     content: '\02795';
                     font-size: 1.2em;
                     float: right;
                     transition: transform 0.3s ease;
                 }
-                
+
                 .accordion-header.active::after {
                     content: '\02796';
                 }
+
                 .accordion-content.active li {
                     max-height: 500px;
                     transition: max-height 0.3s ease;
                 }
-                
+
             }
         }
     }
@@ -171,7 +205,8 @@ footer {
                 font-size: .875rem;
                 color: #adb5bd;
             }
-            @media screen and (max-width: $medium){
+
+            @media screen and (max-width: $medium) {
                 text-align: center;
             }
         }
@@ -180,7 +215,7 @@ footer {
             ul {
                 margin: 0;
                 padding: 0;
-                @include flexContainer(center, center, 15px);
+                @include flexContainer(center, flex-start, 15px);
 
                 li {
                     list-style-type: none;
