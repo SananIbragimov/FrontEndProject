@@ -23,8 +23,8 @@ function generateProductCard(id, title, price, imgSrc, backgroundClass, badge) {
         <div class="section__cart__img__add">
           <a href="#product-container" data-id=${id} class="add-to-cart-btn">Add to cart</a>
           <span class="section__cart__img__add__span">
-            <a href="#"><i class="bi bi-heart"></i></a>
-            <a href="#"><i class="bi bi-arrows-fullscreen"></i></a>
+            <a href="#product-container"><i class="bi bi-heart"></i></a>
+            <a href="#product-container" data-bs-toggle="modal" data-bs-target="#detailModal"><i class="bi bi-arrows-fullscreen"></i></a>
           </span>
         </div>
       </div>

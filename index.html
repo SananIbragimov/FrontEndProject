@@ -10,6 +10,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/css/main.css">
     <title>Varkala E-commerce</title>
 </head>
@@ -64,7 +65,7 @@
     </svg>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="./index.html">Varkala</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -199,11 +200,123 @@
                         Pages
                     </a>
 
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <div class="dropdown-menu navbar__nav__page__icons">
+                        <div class="row">
+                            <div class="col-4 navbar__nav__page__icons__img">
+                                <img src="./assets/images/blog/blog1.jpg" alt="">
+                                <div class="col col-4 navbar__nav__page__icons__img__content">
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Homepage</h5>
+                                        <ul>
+                                            <li><a href="./index.html">Home 1 - Fashion</a></li>
+                                            <li><a href="./index.html">Home 2 - Fashion</a></li>
+                                            <li><a href="./index.html">Home 3 - Design <span
+                                                        class="badge bg-light text-warning-emphasis ms-3">New</span></a>
+                                            </li>
+                                            <li><a href="./index.html">Home 4 - Design <span
+                                                        class="badge bg-light text-warning-emphasis ms-3">New</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Category</h5>
+                                        <ul>
+                                            <li><a href="#">Full width </a></li>
+                                            <li><a href="#">Full width with category menu </a></li>
+                                            <li><a href="#">Full width with big products </a></li>
+                                            <li><a href="#">Fixed width </a></li>
+                                            <li><a href="#">Fixed width & sidebar </a></li>
+                                            <li><a href="#">Fixed width & masonry layout <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Subcategories </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 navbar__nav__page__icons__img">
+                                <img src="./assets/images/blog/blog3.jpg" alt="">
+                                <div class="col col-4 navbar__nav__page__icons__img__content">
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Order process</h5>
+                                        <ul>
+                                            <li><a href="#">Shopping cart</a></li>
+                                            <li><a href="#">Checkout - Five steps <span
+                                                        class="badge bg-light text-warning-emphasis ms-3">New</span></a>
+                                            </li>
+                                            <li><a href="#">Checkout - Single-page</a></li>
+                                            <li><a href="#">Checkout - confirmed</a></li>
+                                            <li><a href="#">Wishlist</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Product</h5>
+                                        <ul>
+                                            <li><a href="#">Product with sticky info</a></li>
+                                            <li><a href="#">Product with background</a></li>
+                                            <li><a href="#">Product standard</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 navbar__nav__page__icons__img">
+                                <img src="./assets/images/blog/blog2.jpg" alt="">
+                                <div class="col col-4 navbar__nav__page__icons__img__content">
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Blog</h5>
+                                        <ul>
+                                            <li><a href="./blog.html">Blog</a></li>
+                                            <li><a href="./blog.html">Blog - Masonry</a></li>
+                                            <li><a href="#">Post</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Pages</h5>
+                                        <ul>
+                                            <li><a href="./about.html">About - Company <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="./about.html">About v.2 - Person <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">F.A.Q. <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="./contact.html">Contact</a></li>
+                                            <li><a href="#">Privacy policy <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 navbar__nav__page__icons__img">
+                                <img src="./assets/images/blog/blog5.jpg" alt="">
+                                <div class="col col-4 navbar__nav__page__icons__img__content">
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Customer</h5>
+                                        <ul>
+                                            <li><a href="./about.html">Login/sign up <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="./about.html">Orders <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Order detail <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Order tracking <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Addresses <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Profile <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Wishlist <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="btn border-0 dropdown-toggle navbar__nav__title" href="#" role="button"
@@ -315,7 +428,7 @@
             <!-- If we need scrollbar -->
             <!-- <div class="swiper-scrollbar"></div> -->
         </div>
-        <section class="top__choice">
+        <section class="top__choice" data-aos="zoom-in-up" data-aos-once="true">
             <div class="row top__choice__first">
                 <div class="col-12 mb-1 top__choice__first__paragraph">
                     <p class="text-uppercase text-muted font-weight-bold mb-1">Top choices</p>
@@ -384,7 +497,7 @@
             </div>
 
         </section>
-        <section class="section__sale">
+        <section class="section__sale" data-aos="zoom-in-up" data-aos-once="true">
             <div class="section__sale__blob"></div>
             <div class="container">
                 <div class="row section__sale__week">
@@ -425,7 +538,7 @@
             </div>
         </section>
 
-        <section class="section__cart">
+        <section class="section__cart" data-aos="zoom-in-up" data-aos-once="true">
             <div class="container mt-2">
                 <div class="row">
                     <div class="col-12 section__cart__title">
@@ -456,7 +569,7 @@
             </div>
         </section>
 
-        <section class=" summer mt-5 mb-5">
+        <section class=" summer mt-5 mb-5" data-aos="zoom-in-up" data-aos-once="true">
             <div class="summer__sale">
                 <div class="summer__sale__blob">
                 </div>
@@ -472,7 +585,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-aos="zoom-in-up" data-aos-once="true">
         <div class="footer__trans">
             <div class="container">
                 <div class="row">
@@ -684,18 +797,23 @@
                             <li class="nav-item active mb-3 ms-3"><a class="pl-0" href="#">Home </a></li>
                             <li class="nav-item mb-2 ms-3"><a class="pl-0" href="#">Link</a></li>
                             <li class="nav-item mb-2"><a class="nav-link pl-0 disabled" href="#">Disabled</a></li>
-                            <li class="nav-item dropdown mb-2 ms-3"><a class="pl-0 dropdown-toggle"
-                                    id="navbarDropdownMenuLink" href="#" data-target="#sidebarSubmenu"
-                                    data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Dropdown
-                                    link</a>
-                                <div class="collapse" id="sidebarSubmenu">
-                                    <ul class="nav flex-column ml-3">
-                                        <li class="nav-item"><a class="nav-link pl-0" href="#">Action</a></li>
-                                        <li class="nav-item"><a class="nav-link pl-0" href="#">Another action</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link pl-0" href="#">Something else
-                                                here</a></li>
-                                    </ul>
+                            <li class="accordion right-accordion">
+                                <div class="accordion-item">
+                                    <div class="nav-item accordion-header mb-2 ms-3" id="customHeadingOne">
+                                        <a class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#customCollapseOne" aria-expanded="true"
+                                            aria-controls="customCollapseOne">Dropdown link</a>
+                                        <div id="customCollapseOne" class="accordion-collapse collapse hide"
+                                            aria-labelledby="customHeadingOne" data-bs-parent="#accordion">
+                                            <ul class="nav flex-column ml-3 accordion-body">
+                                                <li class="nav-item"><a class="nav-link pl-0" href="#">Action</a></li>
+                                                <li class="nav-item"><a class="nav-link pl-0" href="#">Another
+                                                        action</a></li>
+                                                <li class="nav-item"><a class="nav-link pl-0" href="#">Something else
+                                                        here</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -734,12 +852,124 @@
         </div>
     </div>
 
+    <!-- Detail modal -->
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-12 detail__modal__img">
+                                        <img src="./assets/images/index/detail/detail-1.jpg" alt="Detail-1"
+                                            class="main-image">
+                                        <span class="badge badge1">Fresh</span>
+                                        <span class="badge badge2">Sale</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 detail__modal__imgs">
+                                        <img src="./assets/images/index/detail/detail-1.jpg" alt="Detail-1"
+                                            class="thumbnail">
+                                    </div>
+                                    <div class="col-2 detail__modal__imgs">
+                                        <img src="./assets/images/index/detail/detail-2.jpg" alt="Detail-2"
+                                            class="thumbnail">
+                                    </div>
+                                    <div class="col-2 detail__modal__imgs">
+                                        <img src="./assets/images/index/detail/detail-3.jpg" alt="Detail-3"
+                                            class="thumbnail">
+                                    </div>
+                                    <div class="col-2 detail__modal__imgs">
+                                        <img src="./assets/images/index/detail/detail-4.jpg" alt="Detail-4"
+                                            class="thumbnail">
+                                    </div>
+                                    <div class="col-2 detail__modal__imgs">
+                                        <img src="./assets/images/index/detail/detail-5.jpg" alt="Detail-5"
+                                            class="thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row detail__modal__text">
+                                    <div class="col-12">
+                                        <h2>Push-up Jeans</h2>
+                                    </div>
+                                    <div class="col-6 detail__modal__text__cost">
+                                        <span>$65.00</span>
+                                        <del>$90.00</del>
+                                    </div>
+                                    <div class="col-6 detail__modal__text__icons">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                        <span>25 REVIEWS</span>
+                                    </div>
+                                    <div class="col-12 detail__modal__text__paragraph">
+                                        <p>Samsa was a travelling salesman - and above it there hung a picture that he
+                                            had recently cut out of an illustrated magazine and housed in a nice, gilded
+                                            frame.</p>
+                                    </div>
+                                    <div class="col-12 detail__modal__text__feature">
+                                        <h6>Size <span>(required)</span></h6>
+                                    </div>
+                                    <div class="col-12 detail__modal__text__select">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option value="1" selected class="fw-bolder">Small</option>
+                                            <option value="2" class="fw-bolder">Medium</option>
+                                            <option value="3" class="fw-bolder">Large</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 detail__modal__text__feature">
+                                        <h6>Type <span>(required)</span></h6>
+                                    </div>
+                                    <div class="col-12 detail__modal__text__link">
+                                        <a class="btn" href="#">Hoodie</a>
+                                        <a class="btn" href="#">College</a>
+                                    </div>
+                                    <div class="col-12 detail__modal__text__form">
+                                        <input type="number" value="1">
+                                        <button class="btn-dark btn-block" type="submit"> <i
+                                                class="fa fa-shopping-cart mr-2"></i>Add to Cart</button>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-6 detail__modal__text__wl">
+                                        <a href="#"> <i class="far fa-heart me-2"></i>Add to wishlist </a>
+                                    </div>
+                                    <div class="col-6 detail__modal__text__social">
+                                        <a href="#"><i class="bi bi-facebook"></i></a>
+                                        <a href="#"><i class="bi bi-twitter"></i></a>
+                                    </div>
+                                    <div class="col-12 detail__modal__text__footer">
+                                        <ul class="list-unstyled">
+                                            <li><strong>Category:</strong> <a class="text-muted" href="#">Jeans</a></li>
+                                            <li><strong>Tags:</strong> <a class="text-muted" href="#">Leisure</a>, <a
+                                                    class="text-muted" href="#">Elegant</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
 <script src="./assets/scripts/js/swiper.js"></script>
 <script src="./assets/scripts/js/accordion.js"></script>
@@ -747,5 +977,8 @@
 <script src="./assets/scripts/js/navbar.js"></script>
 <script type="module" src="./assets/scripts/js/cart.js"></script>
 <script src="./assets/scripts/js/main.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </html>

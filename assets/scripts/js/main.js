@@ -45,3 +45,20 @@
     this.style.cursor = 'auto';
   });
 }
+
+{
+  $(document).ready(function () {
+    $('.thumbnail').on('click', function () {
+      var mainImageSrc = $(this).attr('src');
+
+      // Set the clicked image as the main image
+      $('.main-image').attr('src', mainImageSrc);
+
+      // Decrease the visibility of other thumbnails
+      $('.thumbnail').not(this).css('opacity', '0.5');
+
+      // Reset the opacity of the clicked thumbnail
+      $(this).css('opacity', '1');
+    });
+  });
+}

@@ -64,3 +64,16 @@
         $(evt.target).addClass("active").css("color", "goldenrod");
     }
 }
+
+{
+    document.addEventListener("DOMContentLoaded", function () {
+        var navbarInput = document.querySelector('.navbar__form__input');
+
+        // Click navbar-toggle icon
+        document.querySelector('.navbar-toggler').addEventListener('click', function () {
+            // Toggle active class
+            navbarInput.classList.toggle('active');
+        });
+    });
+
+}

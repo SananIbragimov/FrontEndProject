@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/css/blog.css">
     <title>Varkala E-commerce - Blog</title>
 </head>
@@ -57,7 +58,7 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="./index.html">Varkala</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -70,11 +71,11 @@
                     </a>
 
                     <ul class="dropdown-menu border-0 navbar__nav__home__icons" style="min-width: 200px;">
-                        <li><a class="dropdown-item" href="#">Home 1 - Fashion</a></li>
-                        <li><a class="dropdown-item" href="#">Home 2 - Fashion</a></li>
-                        <li><a class="dropdown-item" href="#">Home 3 - Design <span
+                        <li><a class="dropdown-item" href="./index.html">Home 1 - Fashion</a></li>
+                        <li><a class="dropdown-item" href="./index.html">Home 2 - Fashion</a></li>
+                        <li><a class="dropdown-item" href="./index.html">Home 3 - Design <span
                                     class="badge bg-light text-warning-emphasis ms-3">New</span></a></li>
-                        <li><a class="dropdown-item" href="#">Home 4 - Design <span
+                        <li><a class="dropdown-item" href="./index.html">Home 4 - Design <span
                                     class="badge bg-light text-warning-emphasis ms-3">New</span></a></li>
                     </ul>
                 </li>
@@ -192,11 +193,123 @@
                         Pages
                     </a>
 
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <div class="dropdown-menu navbar__nav__page__icons">
+                        <div class="row">
+                            <div class="col-4 navbar__nav__page__icons__img">
+                                <img src="./assets/images/blog/blog1.jpg" alt="">
+                                <div class="col col-4 navbar__nav__page__icons__img__content">
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Homepage</h5>
+                                        <ul>
+                                            <li><a href="./index.html">Home 1 - Fashion</a></li>
+                                            <li><a href="./index.html">Home 2 - Fashion</a></li>
+                                            <li><a href="./index.html">Home 3 - Design <span
+                                                        class="badge bg-light text-warning-emphasis ms-3">New</span></a>
+                                            </li>
+                                            <li><a href="./index.html">Home 4 - Design <span
+                                                        class="badge bg-light text-warning-emphasis ms-3">New</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Category</h5>
+                                        <ul>
+                                            <li><a href="#">Full width </a></li>
+                                            <li><a href="#">Full width with category menu </a></li>
+                                            <li><a href="#">Full width with big products </a></li>
+                                            <li><a href="#">Fixed width </a></li>
+                                            <li><a href="#">Fixed width & sidebar </a></li>
+                                            <li><a href="#">Fixed width & masonry layout <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Subcategories </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 navbar__nav__page__icons__img">
+                                <img src="./assets/images/blog/blog3.jpg" alt="">
+                                <div class="col col-4 navbar__nav__page__icons__img__content">
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Order process</h5>
+                                        <ul>
+                                            <li><a href="#">Shopping cart</a></li>
+                                            <li><a href="#">Checkout - Five steps <span
+                                                        class="badge bg-light text-warning-emphasis ms-3">New</span></a>
+                                            </li>
+                                            <li><a href="#">Checkout - Single-page</a></li>
+                                            <li><a href="#">Checkout - confirmed</a></li>
+                                            <li><a href="#">Wishlist</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Product</h5>
+                                        <ul>
+                                            <li><a href="#">Product with sticky info</a></li>
+                                            <li><a href="#">Product with background</a></li>
+                                            <li><a href="#">Product standard</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 navbar__nav__page__icons__img">
+                                <img src="./assets/images/blog/blog2.jpg" alt="">
+                                <div class="col col-4 navbar__nav__page__icons__img__content">
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Blog</h5>
+                                        <ul>
+                                            <li><a href="./blog.html">Blog</a></li>
+                                            <li><a href="./blog.html">Blog - Masonry</a></li>
+                                            <li><a href="#">Post</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Pages</h5>
+                                        <ul>
+                                            <li><a href="./about.html">About - Company <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="./about.html">About v.2 - Person <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">F.A.Q. <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="./contact.html">Contact</a></li>
+                                            <li><a href="#">Privacy policy <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 navbar__nav__page__icons__img">
+                                <img src="./assets/images/blog/blog5.jpg" alt="">
+                                <div class="col col-4 navbar__nav__page__icons__img__content">
+                                    <div class="col-4 navbar__nav__page__icons__img__content__list">
+                                        <h5>Customer</h5>
+                                        <ul>
+                                            <li><a href="./about.html">Login/sign up <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="./about.html">Orders <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Order detail <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Order tracking <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Addresses <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Profile <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                            <li><a href="#">Wishlist <span
+                                                        class="badge bg-light text-warning-emphasis">New</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="btn border-0 dropdown-toggle navbar__nav__title" href="#" role="button"
@@ -240,7 +353,7 @@
         </div>
     </nav>
 
-    <div class="blog">
+    <div class="blog" data-rellax-speed="-1">
         <div class="blog__text">
             <ul class="blog__text__list">
                 <li><a href="./index.html">Home</a></li>
@@ -260,7 +373,7 @@
         </div>
     </div>
     <main>
-        <section class="main">
+        <section class="main" data-aos="zoom-in-up" data-aos-once="true">
             <div class="container">
                 <div class="row main__row">
                     <div class="col-lg-4 col-md-6 mt-5">
@@ -375,7 +488,7 @@
                 </div>
             </div>
         </section>
-        <section class="main__bottom">
+        <section class="main__bottom" data-aos="zoom-in-up" data-aos-once="true">
             <div class="container mb-5">
                 <div class="row">
                     <div class="col-6">
@@ -387,7 +500,7 @@
                 </div>
             </div>
         </section>
-        <section class="section__cart">
+        <section class="section__cart d-none">
             <div class="container mt-2">
                 <div class="row">
                     <div class="col-12 section__cart__title">
@@ -419,7 +532,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-aos="zoom-in-up" data-aos-once="true">
         <div class="footer__trans">
             <div class="container">
                 <div class="row">
@@ -631,18 +744,23 @@
                             <li class="nav-item active mb-3 ms-3"><a class="pl-0" href="#">Home </a></li>
                             <li class="nav-item mb-2 ms-3"><a class="pl-0" href="#">Link</a></li>
                             <li class="nav-item mb-2"><a class="nav-link pl-0 disabled" href="#">Disabled</a></li>
-                            <li class="nav-item dropdown mb-2 ms-3"><a class="pl-0 dropdown-toggle"
-                                    id="navbarDropdownMenuLink" href="#" data-target="#sidebarSubmenu"
-                                    data-toggle="collapse" aria-haspopup="true" aria-expanded="false">Dropdown
-                                    link</a>
-                                <div class="collapse" id="sidebarSubmenu">
-                                    <ul class="nav flex-column ml-3">
-                                        <li class="nav-item"><a class="nav-link pl-0" href="#">Action</a></li>
-                                        <li class="nav-item"><a class="nav-link pl-0" href="#">Another action</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link pl-0" href="#">Something else
-                                                here</a></li>
-                                    </ul>
+                            <li class="accordion right-accordion">
+                                <div class="accordion-item">
+                                    <div class="nav-item accordion-header mb-2 ms-3" id="customHeadingOne">
+                                        <a class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#customCollapseOne" aria-expanded="true"
+                                            aria-controls="customCollapseOne">Dropdown link</a>
+                                        <div id="customCollapseOne" class="accordion-collapse collapse hide"
+                                            aria-labelledby="customHeadingOne" data-bs-parent="#accordion">
+                                            <ul class="nav flex-column ml-3 accordion-body">
+                                                <li class="nav-item"><a class="nav-link pl-0" href="#">Action</a></li>
+                                                <li class="nav-item"><a class="nav-link pl-0" href="#">Another
+                                                        action</a></li>
+                                                <li class="nav-item"><a class="nav-link pl-0" href="#">Something else
+                                                        here</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -690,5 +808,11 @@
 <script src="./assets/scripts/js/navbar.js"></script>
 <script type="module" src="./assets/scripts/js/cart.js"></script>
 <script src="./assets/scripts/js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./assets/scripts/js/rellax.min.js"></script>
+<script>
+    AOS.init();
+    var rellax = new Rellax('.blog');
+</script>
 
 </html>
