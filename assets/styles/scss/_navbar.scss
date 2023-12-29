@@ -478,14 +478,22 @@
         }
 
         /* Bootstrap Accordion Custom Styles */
-        .right-accordion {
-            .accordion-item {
-                border: none;
+        ul {
+            width: 100%;
 
-                .accordion-button {
-                    background-color: transparent;
-                    padding: 0;
-                    margin: 0;
+            .right-accordion {
+                width: 100%;
+
+                .accordion-item {
+                    width: 100%;
+                    border: none;
+
+                    .accordion-button {
+                        width: 100%;
+                        background-color: transparent;
+                        padding: 0;
+                        margin: 0;
+                    }
                 }
             }
         }

@@ -645,10 +645,18 @@
   line-height: 1.6;
   font-weight: 400;
 }
-#sidebarRight .sidebar-content .right-accordion .accordion-item {
+#sidebarRight .sidebar-content ul {
+  width: 100%;
+}
+#sidebarRight .sidebar-content ul .right-accordion {
+  width: 100%;
+}
+#sidebarRight .sidebar-content ul .right-accordion .accordion-item {
+  width: 100%;
   border: none;
 }
-#sidebarRight .sidebar-content .right-accordion .accordion-item .accordion-button {
+#sidebarRight .sidebar-content ul .right-accordion .accordion-item .accordion-button {
+  width: 100%;
   background-color: transparent;
   padding: 0;
   margin: 0;
